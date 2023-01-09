@@ -1,0 +1,14 @@
+data <- read.csv('HR_comma_sep.csv')
+
+head(data)
+
+summary(data$number_project)
+
+summary(data$average_montly_hours)
+
+#Correlation Coefficient
+cor(data$average_montly_hours, data$number_project)
+
+linearMod <- lm(data$average_montly_hours ~ data$number_project)
+
+print(linearMod)
